@@ -26,10 +26,49 @@
 * git과 GitHub은 어떻게 다를까요?
   > git은 소스 코드 수정에 따른 버전을 관리해주는 시스템 그 자체이고, github는 이 시스템을 지원하는 웹 호스팅 시스템이다. github가 존재하지 않았을 때는 CD, 이메일, USB를 사용했다.
 * git의 clone/add/commit/push/pull/branch/stash 명령은 무엇이며 어떨 때 이용하나요? 그리고 어떻게 사용하나요?
+  * git clone - github에 있는 프로젝트를 내 컴퓨터로 복사하여 가져오는 명령어
   > git clone 사용법
   > 1. command line을 통해 해당 깃을 가져오고자 하는 폴더로 이동한다.(윈도우의 경우 cd Desktop 명령어를 쳐서 이동)
   > 2. git clone 명령어를 사용하여 복사하고자 하는 url을 입력해준다 git clone https://github.com/wisline97/WebDevCurriculum.git
   > 3. 그럼 클론 성공!
+
+  * git add - 작업 디렉토리상(내 폴더 안의 파일)의 변경 내용을 스테이징 영역에 추가하기 위해서 사용하는 Git 명령어
+  >git add 사용법
+  > 1. command line을 통해 add 하고자하는 파일이 있는 폴더로 이동한다
+  > 2. git add 명령어를 사용하여 파일명.확장자를 입력한다 git add example.txt
+  > 3. 그럼 클론 성공!
+
+  * git commit - *스테이징 영역에 추가된 수정내용을 Local Repository에 반영하는 명령어
+
+  > git commit 사용법
+  > 1. git commit -m "커밋 메세지"
+
+  * git push - 수정내용을 Remote Repository에 반영하는 명령어
+
+  > git push 사용법
+  > 1. git push origin main (or) branch
+
+  * git pull - 원격 저장소에 있는 프로젝트 내용을 가져오는 역할
+
+  > git clone과 동일하게 둘 다 파일을 원격저장소에서 로컬저장소로  가져온다.
+  > git clone은 local에 아무것도 없는 상태, 초기 다운로드에 사용
+  > git pull은 리모트 설정이 이미 되어있는 상황에서 사용
+
+  > git pull 사용법
+  >
+  > 1. git pull { 원격 저장소 별명 } { 브랜치명 }
+  > ※git pull = git fetch + git merge와 같다
+
+  * git branch - Git에서 브랜치는 독립적인 Working Directory를 의미
+
+  > git branch 사용법
+  > 1. git branch <branch 이름>
+
+  * git stash - 아직 마무리하지 않은 작업을 스택에 잠시 저장할 수 있도록 하는 명령어
+
+  > git stash 사용법(이거는 나중에 내가 충돌을 직접 한 번 겪고 나서 쓰는 것이 편할 듯)
+  > 1. git stash
+  
 * git의 Object, Commit, Head, Branch, Tag는 어떤 개념일까요? git 시스템은 프로젝트의 히스토리를 어떻게 저장할까요?
 * 리모트 git 저장소에 원하지 않는 파일이 올라갔을 때 이를 되돌리려면 어떻게 해야 할까요?
 
